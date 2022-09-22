@@ -1,0 +1,310 @@
+:root{
+	box-sizing: border-box;
+	--clr-Pink: 322 100% 66%;
+	--clr-Light-Pink: 321 100% 78%;
+	--clr-Light-Red: 0 100% 63%;
+
+	--clr-Very-Dark-Cyan: 192 100% 9%;
+	--clr-Very-Pale-Blue: 207 100% 98%;
+}
+
+*,
+*::before,
+*::after{
+	box-sizing: inherit;
+	padding: 0;
+	margin: 0;
+}
+
+img,
+image,
+picture{
+	max-width: 100%;
+}
+
+h1, h2, 
+h3, h4, 
+h5, h5 {
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+	text-decoration: none;
+}
+
+/* utility class */
+.center{
+	text-align: center
+}
+
+.left{
+	text-align: left;
+}
+
+.m-center{
+	margin: 0 auto;
+}
+
+
+
+/* style for the body */
+body{
+	font-family: 'Open Sans', sans-serif;
+	line-height: 1.5;
+}
+
+
+.container{
+	padding-top: 1.5em;
+}
+
+.center-align{
+	max-width: 90em;
+	margin: 0 auto;
+	padding-inline: 2em;
+}
+
+.container * + * {
+	margin-top: 3em;
+}
+
+.btn{
+	display: block;
+	font-weight: 700;
+	background-color: hsl(var(--clr-Pink));
+	color: #fff;
+	max-width: 20em;
+	padding: .6em;
+	border: 0;
+	border-radius: 4em;
+	box-shadow: .1em .3em .4em .1em hsl(207 100% 91%);
+}
+
+.btn:hover:not(.btn--try){
+	background-color: hsl(var(--clr-Light-Pink));
+}
+
+.btn:active{
+	transform: translateY(.1em);
+	box-shadow: .1em .2em .4em .1em hsl(207 100% 91%);
+	
+}
+
+.btn--submit{
+	min-width: 12em;
+	padding-block: 1.5em;
+	border-radius: .8em;
+	margin-left: auto;
+	box-shadow: .1em .2em .4em .1em hsl(var(--clr-Very-Dark-Cyan));
+	cursor: pointer;
+}
+
+.btn--submit:active{
+	box-shadow: .1em .2em .4em .1em hsl(var(--clr-Very-Dark-Cyan) / .7);
+}
+
+.btn--try{
+	min-width: 10em;
+	background-color: #fff;
+	border: 2px solid hsl(var(--clr-Light-Pink));
+	color: hsl(var(--clr-Pink));
+	padding: clamp(5px, 1vw, 8px) clamp(25px, 2vw , 30px);
+}
+
+
+.flex{
+	display: flex;
+	align-items: center;
+	column-gap: 1.5em;
+	
+}
+
+.flex--spacebtw{
+	justify-content: space-between;
+}
+
+.flex *{
+	 margin-top: 0;
+ }
+
+.top{
+	margin-top: 7em;
+}
+.container > section + section{
+	margin-top: 16em;
+	padding-block: 2em;
+}
+
+.no-top-1{
+	margin-block: 10em;
+}
+
+
+.growth {
+	width: fit-content;
+	margin: 8em auto;
+	text-align: left;
+}
+
+.growth *,
+.picture > *{
+	margin-top: 0;
+}
+
+.growth h2{
+	font-size: 4rem;
+}
+
+.growth span{
+	display: block;
+}
+
+.grow,
+.users{
+	background-color: hsl(207 100% 98.2%);
+	margin-top: 0;
+	padding-block: 3em 4em;
+}
+
+
+.flex-only{
+	display: flex;
+}
+
+.flex-only > picture{
+	flex-grow: 1;
+}
+.picture > *{
+	width: 100%;
+}
+.bg-tops .picture > *{
+	height: 100%;
+}
+.bg-sect-bottom{
+	margin-top: 0;
+}
+.bg--foot{
+	margin-top: 15em;
+}
+
+footer{
+	background-color: #00252E;
+	color: #fff;
+	padding-block: 2em;
+}
+
+input[type="email"]{
+	padding: 1.2em;
+	min-width: 100%;
+	border: 0;
+	outline: none;
+	border-radius: .7em;
+}
+.icon {
+	height: 17px;
+}
+
+footer a{
+	color: #fff;
+}
+footer section.mt-xl{
+	margin-top: 10em;
+}
+.contact > div,
+.form > * + * {
+	margin-top: 1em;
+}
+
+.form{
+	position: relative;
+	height: 125px;
+}
+.display-message{
+	font-size: .9rem;
+	color: hsl(var(--clr-Light-Red));
+	margin-top: 0;
+	position: absolute;
+	
+	left: 0;
+	right: 0;
+	bottom: 3.5em;
+}
+input[class="error-border"]{
+	border: 1px solid hsl(var(--clr-Light-Red));
+}
+
+.social{
+	gap: 1em;
+}
+
+.social > a{
+	font-size: 1.2rem;
+	background-color: #fff;
+	color: #00252E;
+	width: 1.5em;
+	border-radius: .2em;
+	
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.social > a:hover{
+	background-color: hsl(207 100% 70%);
+}
+
+.social > .instagram{
+	background-color: transparent;
+	color: #fff;
+}
+
+.social > .instagram:hover{
+	color: #00252E;
+}
+.attribution {
+	font-size: 11px; 
+	text-align: center;
+	
+}
+
+.attribution a {
+	color: hsl(228, 45%, 44%); 
+}
+
+
+/* break points */
+
+@media (min-width: 650px){
+	h2{
+		font-size: 2rem;
+	}
+	
+	.grid{
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		align-items: center;
+		gap: 7em;
+		text-align: left;
+	}
+	
+	.grid > *,
+	footer section.mt-xl{
+		margin-top: 0;
+	}
+	
+	.grid--alternate{
+		grid-area: 1 / 1;
+	}
+	
+	.growth-flex{
+		display: flex;
+	}
+	
+	.p-center{
+		max-width: 30em;
+		margin-inline: auto;
+	}
+}
+
+
+
